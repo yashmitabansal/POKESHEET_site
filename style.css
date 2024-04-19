@@ -1,0 +1,276 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./Images/backimg1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.commonpadding {
+  padding-inline: 100px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.main {
+  background-color: black;
+  height: 100%;
+  opacity: 0.8;
+  /* border: 2px solid red; */
+}
+
+#dropdownHover li a:hover {
+  background-color: #ff725e;
+}
+/* section 1 */
+
+.wrapper-flamethrower {
+  /* border: 2px solid white; */
+}
+.wrapper-flamethrower img {
+  width: 100%;
+
+
+}
+
+.meet-charizard {
+  margin: 0;
+  position: relative;
+  color: white;
+  line-height: 40px;
+  font-family: inherit;
+}
+.discover-the-majestic {
+  align-self: stretch;
+  position: relative;
+  font-size: 24px;
+  line-height: 28.8px;
+  color: white;
+  z-index: 3;
+}
+.meet-charizard-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
+}
+.instance-child {
+  position: absolute;
+  height: 74.37%;
+  width: 100%;
+  top: 25.63%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 11.96px;
+  background-color: #222;
+}
+.image-19-icon {
+  position: absolute;
+  height: 89.35%;
+  width: 84.87%;
+  top: 0;
+  right: 6.18%;
+  bottom: 10.65%;
+  left: 8.95%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: contain;
+  z-index: 1;
+}
+.aerial-ace {
+  position: absolute;
+  top: 84.51%;
+  left: 28.09%;
+  display: inline-block;
+  min-width: 83px;
+  z-index: 2;
+  color: white;
+}
+.rectangle-parent {
+  align-self: stretch;
+  height: 194.3px;
+  position: relative;
+}
+
+.instance-child {
+  position: absolute;
+  height: 84.31%;
+  width: 100%;
+  top: 15.69%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 11.96px;
+  background-color: #222;
+  box-sizing: border-box;
+}
+
+.rectangle-parent img:hover {
+  color: #ff4210;
+  border-radius: 11.96px;
+  background-color: #c8bcba;
+  border: 2px solid #ff4210;
+  width: 100%;
+  box-sizing: border-box;
+  height: 84.31%;
+  position: absolute;
+  /* top: 15.69%; */
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.aerial-ace:hover {
+  color: #ff4210;
+}
+
+.attacks,
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.attacks {
+  width: 204.4px;
+  padding: 0 20px 0 0;
+  box-sizing: border-box;
+  gap: 20px;
+  z-index: 2;
+  font-size: 15.9px;
+  font-family: Epilogue;
+}
+.sectionhead {
+  position: absolute;
+  top: 237px;
+  left: 125px;
+  width: 437px;
+  gap: 32px;
+  max-width: 100%;
+  font-size: 33px;
+  /* border: 2px solid white; */
+}
+
+.unleash-the {
+  width: 100%;
+  font-size: 50px;
+  font-weight: 400;
+  display: flex;
+  justify-content: flex-end;
+  transform: rotate(-90deg);
+  margin-top: auto;
+  /* border: 2px solid white; */
+}
+.fireWith {
+  font-size: 150px;
+}
+.section1 {
+  border: 2px solid white;
+  display: flex;
+  justify-content: space-around;
+}
+
+.explore-the-charizard {
+  margin: 0;
+  width: 1237px;
+  position: relative;
+  font-size: 50px;
+  font-weight: 300;
+  font-family: inherit;
+  text-align: center;
+  justify-content: center;
+  z-index: 2;
+}
+.value-transformer {
+  position: absolute;
+  top: 949px;
+  left: 0;
+  background: linear-gradient(180deg, rgba(15, 15, 15, 0), #0f0f0f);
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 27px 20px 70px 21px;
+  box-sizing: border-box;
+  gap: 268px;
+  text-align: left;
+  font-size: 47.9px;
+  color: #fff;
+  font-family: Epilogue;
+}
+
+/* section 2 */
+
+.section2div h1 {
+  font-weight: 550;
+  font-size: 65px;
+}
+
+.section2div p {
+  font-weight: 400;
+  font-size: 20px;
+  width: 60%;
+}
+
+/* section 3 */
+.section3 {
+  margin-inline: auto;
+}
+.section3btn {
+  font-weight: 450;
+  font-size: 35px;
+  width: 100%;
+}
+.section3btn:hover {
+  text-decoration: underline;
+}
+
+.section3ptext {
+  font-weight: 400;
+  font-size: 20px;
+  width: 60%;
+}
+
+/* section 4 */
+.section4div3 img {
+  height: 375px;
+}
+
+.section4text {
+  font-weight: 500;
+}
+
+/* section 5 */
+.section5div {
+  background-color: #fd4110;
+  opacity: 0.8;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+
+.section5 {
+  background-color: black;
+  background-image: url("./Images/backimg3.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.formsign button {
+  border: 2px solid white;
+  background-color: #fd4110;
+}
+.formsign button:hover {
+  background-color: #fb3707;
+}
+
+/* footer css */
+.footerDiv1 {
+  width: 70%;
+  margin: auto;
+}
