@@ -2,25 +2,54 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  color: white;
+}
+body { 
+  background-color: #0f0f0f;
+  font-family:'inter var', sans-serif;
+  font-feature-settings: "calt","liga";
 }
 
-body {
+.fire_background {
   background-image: url("./Images/backimg1.png");
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  position: fixed;
+  top: -250px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
+.fire_background_2 {
+  background-image: url("./Images/backimg4.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 1000px;
+  height: 1000px;
+  z-index: 1;
+  left: -500px;
+}
+
+.fire_background_3 {
+  margin-left: -780px;
+  margin-top: -210px;
+  margin-bottom: -700px;
+}
+
 .commonpadding {
   padding-inline: 100px;
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 .main {
   background-color: black;
   height: 100%;
-  opacity: 0.8;
+  opacity: 0.9;
+  /* z-index: -10;  */
   /* border: 2px solid red; */
-}
+} 
+
 
 /* header */
 
@@ -35,40 +64,10 @@ body {
 }
 /* section 1 */
 
-.wrapper-flamethrower {
-  /* border: 2px solid white; */
-}
-.wrapper-flamethrower img {
-  width: 100%;
-}
-
-.meet-charizard {
-  margin: 0;
-  position: relative;
-  color: white;
-  line-height: 40px;
-  font-family: inherit;
-}
-.discover-the-majestic {
-  align-self: stretch;
-  position: relative;
-  font-size: 24px;
-  line-height: 28.8px;
-  color: white;
-  z-index: 3;
-}
-.meet-charizard-parent {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 16px;
-}
 .instance-child {
   position: absolute;
-  height: 74.37%;
-  width: 100%;
+  height: 75%;
+  width: 75%;
   top: 25.63%;
   right: 0;
   bottom: 0;
@@ -78,13 +77,12 @@ body {
 }
 .image-19-icon {
   position: absolute;
-  height: 89.35%;
-  width: 84.87%;
+  height: 75%;
+  width: 75%;
   top: 0;
-  right: 6.18%;
+  /* right: 6.18%;
   bottom: 10.65%;
-  left: 8.95%;
-  max-width: 100%;
+  left: 8.95%; */
   overflow: hidden;
   max-height: 100%;
   object-fit: contain;
@@ -92,20 +90,21 @@ body {
 }
 .aerial-ace {
   position: absolute;
-  top: 84.51%;
-  left: 28.09%;
+  top: 80%;
+  left: 18%;
   display: inline-block;
   min-width: 83px;
+  font-size: 14px;
   z-index: 2;
   color: white;
 }
 .rectangle-parent {
   align-self: stretch;
-  height: 194.3px;
+  height: 140px;
   position: relative;
 }
 
-.instance-child {
+/* .instance-child {
   position: absolute;
   height: 84.31%;
   width: 100%;
@@ -116,21 +115,25 @@ body {
   border-radius: 11.96px;
   background-color: #222;
   box-sizing: border-box;
+} */
+
+
+.Charizard_img {
+  width: 100%;
 }
 
-.rectangle-parent img:hover {
+.rectangle-parent:hover .instance-child{
   color: #ff4210;
   border-radius: 11.96px;
   background-color: #c8bcba;
   border: 2px solid #ff4210;
-  width: 100%;
   box-sizing: border-box;
   height: 84.31%;
   position: absolute;
-  /* top: 15.69%; */
-  right: 0;
-  bottom: 0;
+  top: 25.63%;
   left: 0;
+  width: 75%;
+  height: 75%;
 }
 
 .aerial-ace:hover {
@@ -154,33 +157,24 @@ body {
   font-family: Epilogue;
 }
 .sectionhead {
-  position: absolute;
-  top: 237px;
-  left: 125px;
   width: 437px;
   gap: 32px;
-  max-width: 100%;
   font-size: 33px;
   /* border: 2px solid white; */
 }
 
-.unleash-the {
-  width: 100%;
-  font-size: 50px;
-  font-weight: 400;
-  display: flex;
-  justify-content: flex-end;
+.minus-rotate-90 {
   transform: rotate(-90deg);
-  margin-top: auto;
-  /* border: 2px solid white; */
 }
-.fireWith {
-  font-size: 150px;
+
+.unleash_the_text {
+  font-size: 35%;
+  text-wrap: nowrap;
+  font-weight:300;
 }
-.section1 {
-  border: 2px solid white;
-  display: flex;
-  justify-content: space-around;
+.fireWith_text {
+  font-size: 130%;
+  text-wrap: nowrap;
 }
 
 .explore-the-charizard {
@@ -213,16 +207,8 @@ body {
 
 /* section 2 */
 
-.section2div h1 {
-  font-weight: 550;
-  font-size: 65px;
-}
 
-.section2div p {
-  font-weight: 400;
-  font-size: 20px;
-  width: 60%;
-}
+
 
 /* section 3 */
 .section3 {
@@ -276,10 +262,7 @@ body {
 }
 
 /* footer css */
-.footerDiv1 {
-  width: 70%;
-  margin: auto;
-}
+
 
 @media screen and (max-width: 1200px) {
   .footerDiv2 {
@@ -292,28 +275,18 @@ body {
   }
 }
 @media screen and (max-width: 1344px) {
-  .section5divp {
-    width: 80%;
-  }
+  
   .section5divh {
     width: 100%;
     font-size: 30px;
     font-weight: 700;
-  }
-  .section2div h1 {
-    font-weight: 550;
-
-    font-size: 30px;
-    width: 100%;
   }
 
   .section4div3 img {
     height: 325px;
   }
 
-  .section4text {
-    font-size: 20px;
-  }
+
 
   .navbtn1 {
     font-size: 20px;
@@ -336,26 +309,14 @@ body {
     width: 100%;
   }
 
-  .section2div h1 {
-    font-weight: 550;
-    font-size: 25px;
-    width: 100%;
-  }
 
-  .section2div p {
-    font-weight: 400;
-    font-size: 20px;
-    width: 100%;
-  }
 
   .section4div3 img {
     height: 280px;
   }
 }
 @media screen and (max-width: 1100px) {
-  .section5divp {
-    width: 100%;
-  }
+  
   .section5divh {
     width: 100%;
     font-size: 20px;
@@ -366,14 +327,13 @@ body {
   }
   .section4text {
     font-size: 12px;
-    width: 80%;
   }
 }
 @media screen and (max-width: 1025px) {
   .section4div1 {
     justify-content: center;
     align-items: center;
-    margin: auto;
+
   }
   .section4div3 img {
     height: 250px;
@@ -398,13 +358,7 @@ body {
     width: 100%;
   }
 
-  .section2div h1 {
-    font-weight: 550;
-    font-size: 25px;
-    width: 70%;
-    text-align: center;
-    margin-inline: auto;
-  }
+  
 }
 
 @media screen and (max-width: 870px) {
@@ -417,7 +371,6 @@ body {
   .section4div1 {
     justify-content: center;
     align-items: center;
-    margin: auto;
   }
   .section4div3 img {
     height: 250px;
@@ -430,11 +383,7 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .section5divp {
-    text-align: center;
-    /* margin: auto; */
-    margin-inline: auto;
-  }
+  
   .section3btn {
     text-align: center;
     width: 60%;
@@ -442,14 +391,12 @@ body {
   .section4div1 {
     justify-content: center;
     align-items: center;
-    margin: auto;
   }
   .section4div3 img {
     height: 250px;
   }
   .section4div3 {
     width: 400px;
-
     margin-top: 20px;
   }
 }

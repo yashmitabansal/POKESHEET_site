@@ -13,18 +13,68 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <style>
+ .tab-container {
+  position: relative;
+  width: 100%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  color: white;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  padding-bottom: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.tab-button:hover {
+  color: red;
+  border-bottom: 2px solid red;
+}
+
+.tab-button.active {
+  color: red;
+  border-bottom: 2px solid red;
+}
+
+.tab-content {
+  position: relative;
+  padding-top: 20px;
+  border-top: none;
+  margin-top: 20px;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+    </style>
   </head>
   <body>
     <div>
+      <div class="fire_background"></div>
+    </div>
+    <div>
       <div class="main">
         <header class="text-white body-font commonpadding">
-          <div class="mx-auto flex p-5 justify-between">
+          <div class="mx-auto flex justify-between">
             <div class="">
               <a class="title-font font-medium md:mb-0">
                 <img
                   src="/Images/logo.png"
                   alt=""
-                  class="w-25 h-19"
+                  class="w-36"
                   viewBox="0 0 24 24"
                 />
               </a>
@@ -35,7 +85,7 @@
                   id="dropdownHoverButton"
                   data-dropdown-toggle="dropdownHover"
                   data-dropdown-trigger="hover"
-                  class="text-sm px-5 py-2.5 text-center inline-flex items-center navbtn1"
+                  class="text-sm px-5 py-2 text-center inline-flex items-center navbtn1"
                   type="button"
                 >
                   EXPLORE THE UNIVERSE
@@ -47,34 +97,34 @@
                   class="z-10 hidden bg-white divide-y rounded-lg shadow w-44 dark:bg-gray-700"
                 >
                   <ul
-                    class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                    class="py-2 text-sm text-black dark:text-gray-200"
                     aria-labelledby="dropdownHoverButton"
                   >
                     <li>
                       <a
                         href="#"
-                        class="block px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white"
+                        class="block text-black px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white"
                         >Pikachu</a
                       >
                     </li>
                     <li>
                       <a
                         href="#"
-                        class="block px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white"
+                        class="block text-black px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white"
                         >Bulbasaur</a
                       >
                     </li>
                     <li>
                       <a
                         href="#"
-                        class="block px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white"
+                        class="block text-black px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white"
                         >Charizard</a
                       >
                     </li>
                     <li>
                       <a
                         href="#"
-                        class="block px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white"
+                        class="block text-black px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white"
                         >Jigglypuff</a
                       >
                     </li>
@@ -83,31 +133,40 @@
               </nav>
             </div>
             <div>
-              <button class="py-1 px-3 text-base md:mt-0">
+              <button class="py-1 px-3 text-base md:mt-0 w-16">
                 <img src="/Images/darkmode.png" alt="" />
               </button>
             </div>
           </div>
         </header>
-        <hr />
+        <hr class="py-0"/>
 
 
 
         <!-- >section 1-->
-        <section class="mx-auto commonpadding section1">
-          <div class="sectionhead">
-            <div class="meet-charizard-parent">
-              <h3 class="meet-charizard">Meet Charizard</h3>
-              <div class="discover-the-majestic">
+        <section class="absolute top-16 right-0 left-0 flex items-center justify-center">
+          <div class=" w-3/5 ml-32">
+            <img
+              class="w-full h-full"
+              loading="lazy"
+              alt=""
+              src="./Images/flamethrower.png"
+            />
+          </div>
+        </section>
+        <!-- >section 2-->
+        <section class="mx-auto commonpadding w-full flex justify-between">
+          <div class="sectionhead w-1/5">
+            <div class="w-full pr-6 leading-normal text-white">
+              <h3 class="mt-4 mb-3 text-2xl font-bold text-white">Meet Charizard</h3>
+              <div class="text-lg text-white">
                 Discover the majestic Charizard, a powerful Fire and Flying-type
                 Pokémon known for its fierce demeanor and indomitable spirit.
                 Learn about Charizard's origins, abilities, and evolution, and
                 uncover the secrets of its fiery prowess.
               </div>
             </div>
-
             <!-- >part3-->
-
             <div class="attacks">
               <div class="rectangle-parent">
                 <div class="instance-child"></div>
@@ -117,8 +176,8 @@
                   alt=""
                   src="./Images/image 18.png"
                 />
-
-                <b class="aerial-ace">Aerial Ace</b>
+                <b class="aerial-ace">Giga Impact</b>
+                <div class="overlay"></div>
               </div>
               <div class="rectangle-parent">
                 <div class="instance-child"></div>
@@ -128,8 +187,8 @@
                   alt=""
                   src="./Images/image 19.png"
                 />
-
                 <b class="aerial-ace">Aerial Ace</b>
+                <div class="overlay"></div>
               </div>
               <div class="rectangle-parent">
                 <div class="instance-child"></div>
@@ -140,7 +199,8 @@
                   src="./Images/image 21.png"
                 />
 
-                <b class="aerial-ace">Aerial Ace</b>
+                <b class="aerial-ace">Dragon Tail</b>
+                <div class="overlay"></div>
               </div>
               <div class="rectangle-parent">
                 <div class="instance-child"></div>
@@ -151,34 +211,38 @@
                   src="./Images/image 22.png"
                 />
 
-                <b class="aerial-ace">Aerial Ace</b>
+                <b class="aerial-ace">Flamethrower</b>
+                <div class="overlay"></div>
               </div>
             </div>
           </div>
-          <div class="wrapper-flamethrower">
-            <img
-              class="flamethrower-icon"
-              loading="lazy"
-              alt=""
-              src="./Images/flamethrower.png"
-            />~
+          
+          <div class="w-3/5">
           </div>
-          <div class="text-white flex flex-col unleash-the">
-            <div>Unleash the</div>
-            <div class="fireWith"><span>Fire within</span></div>
+          <div class="text-white  w-1/5 flex items-end">
+            <div class="text-9xl w-48">
+              <div class="flex flex-col minus-rotate-90">
+                <div class="unleash_the_text">Unleash the</div>
+                <div class="fireWith_text">Fire within</div>
+              </div>
+            </div>
+            
           </div>
         </section>
         <!-- section 2-->
         <section
-          class="text-white body-font mt-80 section2 commonpadding -mb-14"
+          class="main  text-white body-font section2 commonpadding -mb-14"
         >
-          <div
-            class="flex flex-col text-center w-full px-5 mx-auto section2div"
+        <div class="fire_background_3">
+          <div class="fire_background_2"></div>
+        </div>
+        <div
+            class="text-center w-full px-5 mx-auto"
           >
-            <h1 class=" text-2xl font-medium title-font mb-7">
+            <h1 class="w-full text-6xl font-medium mb-5">
               Explore the Charizard Kingdom
             </h1>
-            <p class="lg:w-1/2 mx-auto leading-relaxed text-base">
+            <p class="w-4/5 px-3 mx-auto text-lg">
               Discover the majestic Charizard, a powerful Fire and Flying-type
               Pokémon known for its fierce demeanor and indomitable spirit.
               Learn about Charizard's origins, abilities, and evolution, and
@@ -186,169 +250,174 @@
             </p>
           </div>
         </section>
-        <!--section 3-->
-        <section class="body-font text-white commonpadding section3 -mb-24">
-          <div class="container py-8 mx-auto section3div">
-            <div class="flex -mb-5 text-center mx-auto ">
-              <div class="mb-10 ">
-                <button
-                  class="flex mx-auto mt-6 border-0 py-2 focus:outline-none hover:text-red-500 section3btn"
-                >
-                  Embark on Epic Adventures
-                </button>
+<!-- section 4 for Horizontol tabs -->
+        <section class="mt-200 commonpadding">
+          <div class="tab-container">
+            <button class="tab-button active" data-tab="tab1">Embark on Epic Adventures</button>
+            <button class="tab-button" data-tab="tab2">Train Charizard to Greatness</button>
+            <div class="tab-content">
+              <div id="tab1" class="tab-panel active">
+                <p class="w-4/5 px-3 mx-auto text-lg text-white text-center">Embark on an adventure of a lifetime with Charizard by your side, and discover the true meaning of courage, determination, and friendship in the Pokémon world. Are you ready to soar to new heights and conquer the unknown? The journey awaits!</p>
+                <div class="w-full">
+                  <section class="text-gray-600 body-font -mx-10">
+  <div class="flex border-2 border-white mt-10 rounded-lg">
+    <div class="w-1/2 flex flex-col items-start text-left mb-16 md:mb-0  py-16 pl-16">
+      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-bold text-white">Embark on Epic Adventures</h1>
+      <p class="mb-8 leading-relaxed ">Join forces with Charizard and embark on thrilling adventures across the Pokémon region. Soar through the skies, battle formidable opponents, and conquer challenging dungeons as you journey alongside this mighty Pokémon.</p>
+      <div class="flex justify-center">
+        <button class="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg">Discover</button>
+      </div>
+    </div>
+    <div class="">
+      <img class="object-cover object-center rounded h-96" alt="hero" src="./Images/Rectangle 66.jpg">
+    </div>
+  </div>
+</section>
+                </div>
               </div>
-              <div class="mb-10 ">
-                <button
-                  class="flex mx-auto mt-6  py-2 focus:outline-none hover:text-red-500 text-nowrap section3btn"
-                >
-                  Train Charizard to Greatness
-                </button>
+              <div id="tab2" class="tab-panel">
+                <p class="w-4/5 px-3 mx-auto text-lg text-white text-center">Master the art of Pokémon training and unleash the full
+                  potential of your Charizard. Train diligently to level up its
+                  skills, teach it powerful moves, and watch as it evolves into
+                  the awe-inspiring force of nature that is Mega Charizard.</p>
+                  <div class="w-full">
+                    <section class="body-font">
+                      <div class="flex flex-wrap py-24 section4div1">
+                        
+                        <div class="p-4 md:w-1/3 section4div3">
+                          <div
+                            class="border-x border-white-200 border-opacity-60 rounded-tr-3xl overflow-hidden"
+                          >
+                            <img
+                              class="lg:h-48 md:h-36 w-full object-cover object-center"
+                              src="./Images/Rectangle 54.png"
+                              alt="blog"
+                            />
+                            <div class="bg-transparent -mt-32 items-center p-4">
+                              
+                              <div class="flex flex-wrap">
+                                <div class="w-48">
+                                  <p
+                                    class="text-white inline-flex items-center md:mb-2 lg:mb-0 section4text"
+                                  >
+                                  Level Up Your Charizard's Skills
+                                  </p>
+                                </div>
+                                <span
+                                  class="text-white mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm py-1"
+                                >
+                                  <svg
+                                    class="w-6 h-7"
+                                    stroke="currentColor"
+                                    stroke-width="1"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    viewBox="0 0 18 24"
+                                  >
+                                    <circle cx="12" cy="12" r="11"></circle>
+                                    <path d="M5 12h14"></path>
+                                    <path d="M12 5l7 7-7 7"></path>
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="p-4 md:w-1/3 section4div3">
+                          <div
+                            class="border-x border-white-200 border-opacity-60 rounded-tr-3xl overflow-hidden"
+                          >
+                            <img
+                              class="lg:h-48 md:h-36 w-full object-cover object-center"
+                              src="./Images/Rectangle 56.png"
+                              alt="blog"
+                            />
+                            <div class="bg-transparent -mt-32 items-center p-4">
+                              
+                              <div class="flex flex-wrap">
+                                <div class="w-48">
+                                  <p
+                                    class="text-white inline-flex items-center md:mb-2 lg:mb-0 section4text"
+                                  >
+                                    Teach Your Charizard Powerful Moves
+                                  </p>
+                                </div>
+                                <span
+                                  class="text-white mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm py-1"
+                                >
+                                  <svg
+                                    class="w-6 h-7"
+                                    stroke="currentColor"
+                                    stroke-width="1"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    viewBox="0 0 18 24"
+                                  >
+                                    <circle cx="12" cy="12" r="11"></circle>
+                                    <path d="M5 12h14"></path>
+                                    <path d="M12 5l7 7-7 7"></path>
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="p-4 md:w-1/3 section4div3">
+                          <div
+                            class="border-x border-white-200 border-opacity-60 rounded-tr-3xl overflow-hidden"
+                          >
+                            <img
+                              class="lg:h-48 md:h-36 w-full object-cover object-center"
+                              src="./Images/Rectangle 55.png"
+                              alt="blog"
+                            />
+                            <div class="bg-transparent -mt-32 items-center p-4">
+                              
+                              <div class="flex flex-wrap">
+                                <div class="w-48">
+                                  <p
+                                    class="text-white inline-flex items-center md:mb-2 lg:mb-0 section4text "
+                                  >
+                                  Witness the Evolution of Mega Charizard
+                                  </p>
+                                </div>
+                                <span
+                                  class="text-white mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm py-1"
+                                >
+                                  <svg
+                                    class="w-6 h-7"
+                                    stroke="currentColor"
+                                    stroke-width="1"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    viewBox="0 0 18 24"
+                                  >
+                                    <circle cx="12" cy="12" r="11"></circle>
+                                    <path d="M5 12h14"></path>
+                                    <path d="M12 5l7 7-7 7"></path>
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
               </div>
             </div>
-          </div>
-          <div class="container px-5 mx-auto">
-            <div class="text-center">
-              <p
-                class="lg:w-1/2 mx-auto leading-relaxed text-base section3ptext"
-              >
-                Master the art of Pokémon training and unleash the full
-                potential of your Charizard. Train diligently to level up its
-                skills, teach it powerful moves, and watch as it evolves into
-                the awe-inspiring force of nature that is Mega Charizard.
-              </p>
-            </div>
-          </div>
+          </div>   
         </section>
-        <!--section 4-->
-        <section class="body-font commonpadding">
-          <div class="flex flex-wrap mx-auto px-5 py-24 section4div1">
-            <div class="p-4 md:w-1/3 section4div3">
-              <div
-                class="h-full border-x border-white-200 border-opacity-60 rounded-tr-3xl overflow-hidden"
-              >
-                <img
-                  class="lg:h-48 md:h-36 w-full object-cover object-center"
-                  src="./Images/Rectangle 54.png"
-                  alt="blog"
-                />
-
-                <div class="flex items-center flex-wrap p-4">
-                  <div class="w-40">
-                    <p
-                      class="text-white inline-flex items-center md:mb-2 lg:mb-0 section4text"
-                    >
-                      Teach Your Charizard Powerful Moves
-                    </p>
-                  </div>
-                  <span
-                    class="text-white mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm py-1"
-                  >
-                    <svg
-                      class="w-6 h-7"
-                      stroke="currentColor"
-                      stroke-width="1"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      viewBox="0 0 18 24"
-                    >
-                      <circle cx="12" cy="12" r="11"></circle>
-                      <path d="M5 12h14"></path>
-                      <path d="M12 5l7 7-7 7"></path>
-                    </svg>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="p-4 md:w-1/3 section4div3">
-              <div
-                class="h-full border-x border-white-200 border-opacity-60 rounded-tr-3xl overflow-hidden"
-              >
-                <img
-                  class="lg:h-48 md:h-36 w-full object-cover object-center"
-                  src="./Images/Rectangle 56.png"
-                  alt="blog"
-                />
-
-                <div class="flex items-center flex-wrap p-4">
-                  <div class="w-40">
-                    <p
-                      class="text-white inline-flex items-center md:mb-2 lg:mb-0 section4text"
-                    >
-                      Teach Your Charizard Powerful Moves
-                    </p>
-                  </div>
-
-                  <span
-                    class="text-white mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm py-1"
-                  >
-                    <svg
-                      class="w-6 h-7"
-                      stroke="currentColor"
-                      stroke-width="1"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      viewBox="0 0 18 24"
-                    >
-                      <circle cx="12" cy="12" r="11"></circle>
-                      <path d="M5 12h14"></path>
-                      <path d="M12 5l7 7-7 7"></path>
-                    </svg>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="p-4 md:w-1/3 section4div3">
-              <div
-                class="h-full border-x border-white-200 border-opacity-60 rounded-tr-3xl overflow-hidden"
-              >
-                <img
-                  class="lg:h-48 md:h-36 w-full object-cover object-center"
-                  src="./Images/Rectangle 55.png"
-                  alt="blog"
-                />
-
-                <div class="flex items-center flex-wrap p-4">
-                  <div class="w-40">
-                    <p
-                      class="text-white inline-flex items-center md:mb-2 lg:mb-0 section4text"
-                    >
-                      Teach Your Charizard Powerful Moves
-                    </p>
-                  </div>
-                  <span
-                    class="text-white mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm py-1"
-                  >
-                    <svg
-                      class="w-6 h-7"
-                      stroke="currentColor"
-                      stroke-width="1"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      viewBox="0 0 18 24"
-                    >
-                      <circle cx="12" cy="12" r="11"></circle>
-                      <path d="M5 12h14"></path>
-                      <path d="M12 5l7 7-7 7"></path>
-                    </svg>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-
-
       </div>
 
       <!-- section 5-->
-      <section class="text-white body-font section5 commonpadding">
-        <div class="mx-auto flex px-5 py-20 md:flex-row flex-col section5div ">
+      <section class="text-white body-font section5 commonpadding -mx-10">
+        <div class="mx-auto h-96 flex px-16 py-16 flex-row section5div mb-40 ">
           <div
-            class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 text-center"
+            class="w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 text-center"
           >
             <h1
               class="title-font text-5xl mb-4 font-medium text-white md:text-left ml-4 section5divh"
@@ -356,7 +425,7 @@
               Connect with Charizard Trainers
             </h1>
             <p
-              class="md:text-center ml-4 mb-8 leading-relaxed text-left mt-2 w-2/3 section5divp"
+              class="md:text-center ml-4 mb-8 leading-relaxed text-left mt-2 w-full section5divp"
             >
               Forge bonds with fellow Charizard enthusiasts and share your
               experiences, strategies, and accomplishments. Connect with
@@ -425,7 +494,7 @@
                       id="remember_me"
                       class="mr-2 focus:ring-0 rounded"
                     />
-                    <label for="remember_me" class=""
+                    <label for="remember_me" class="text-gray-500"
                       >I accept to the
                       <a href="#" class="text-blue-600 hover:text-blue-700"
                         >terms</a
@@ -443,7 +512,7 @@
                       id="remember_me"
                       class="mr-2 focus:ring-0 rounded"
                     />
-                    <label for="remember_me" class=""
+                    <label for="remember_me" class="text-gray-500"
                       >Send me the latest deal alerts</label
                     >
                   </div>
@@ -467,7 +536,7 @@
       <div class="flex items-end w-full bg-black">
         <footer class="w-full text-white body-font">
           <div
-            class="flex flex-col flex-wrap px-5 py-24 md:items-center lg:items-start md:flex-row md:flex-no-wrap footerDiv1"
+            class="flex flex-row py-24 w-4/5 mx-auto"
           >
             <div class="flex-shrink-0 w-64 mx-auto text-left md:mx-0 footerDiv2">
               <a class="flex font-medium text-white title-font">
@@ -558,7 +627,7 @@
               </div>
             </div>
             <div
-              class="flex flex-grow mt-10 ml-50 text-center md:justify-center md:mt-20 md:ml-0 footerDiv2"
+              class="flex flex-grow  ml-50 text-center footerDiv2 text-sm"
             >
               <div
                 class="w-full px-4 lg:w-1/4 md:w-1/2 text-left md:text-center"
@@ -668,10 +737,10 @@
           </div>
 
           <hr class="w-2/3 mx-auto" />
-          <div class="text-white text-center">
+          <div class="text-white text-gray-500">
             <div class="px-5 py-4 mx-auto">
               <p
-                class="text-sm text-white capitalize xl:text-center cursor-pointer hover:text-gray-700"
+                class="text-sm text-gray-500 capitalize xl:text-center cursor-pointer hover:text-gray-700 mb-20"
               >
                 © 2023 POKESHEETTM Pvt.Ltd. All rights reserved.
               </p>
@@ -682,5 +751,28 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <script>
+      const tabButtons = document.querySelectorAll('.tab-button');
+const tabPanels = document.querySelectorAll('.tab-panel');
+
+tabButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const tabId = button.getAttribute('data-tab');
+    const tab = document.getElementById(tabId);
+
+    tabButtons.forEach((btn) => {
+      btn.classList.remove('active');
+    });
+
+    tabPanels.forEach((panel) => {
+      panel.classList.remove('active');
+    });
+
+    button.classList.add('active');
+    tab.classList.add('active');
+  });
+});
+    </script>
   </body>
 </html>
