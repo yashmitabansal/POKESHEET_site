@@ -314,6 +314,18 @@ body {
   .section4div3 img {
     height: 280px;
   }
+
+  .section5div{
+height: max-content; 
+  }
+  .section5subdiv{
+    width: 50%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .formdiv{
+width: 100%;
+  }
 }
 @media screen and (max-width: 1100px) {
   
@@ -381,9 +393,12 @@ body {
     margin-top: 20px;
   }
 }
-
 @media screen and (max-width: 768px) {
   
+
+  .section5divh {
+  text-align: start;
+  }
   .section3btn {
     text-align: center;
     width: 60%;
